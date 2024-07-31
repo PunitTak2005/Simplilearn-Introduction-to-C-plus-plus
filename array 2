@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>  // Include the vector library
+using namespace std;
+using namespace std;
+
+int main()
+{
+    int sum = 0;
+    int n;
+    cin >> n;
+
+    // Check if the input is a valid positive number
+    if (n <= 0) {
+        cout << "Invalid input. Please enter a positive number.";
+        return 1;  // Return an error code
+    }
+
+    vector<int> array(n);  // Use std::vector to dynamically allocate the array
+
+    for (int i = 0; i < n; i++) {
+        cin >> array[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += array[i];
+    }
+
+    cout << "Sum is :" << sum;
+    return 0;
+}
